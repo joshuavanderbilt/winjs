@@ -14,3 +14,18 @@ function openwindow(title, wincontent, width) {
 
 }
 
+// Make window with specified title, iframe URL width and height.
+function iwindow(title, wincontent, width, height) {   
+        winid += 1;
+        //Windows will be inserted into the element with the id "desktop"
+        var desktop = document.getElementById("desktop");
+        desktop.innerHTML += "<div class='window active' id='" + winid + "' style='position:absolute;left:40px;top:40px;width:" + width + "px;'><div c
+lass='title-bar'><div class='title-bar-text'>" + title + "</div><div class='title-bar-controls'><button onclick='const element = document.getElementBy
+Id(" + winid + ");element.remove()' aria-label='Close'></button></div></div><div class='window-body'>" + "<iframe src='" + wincontent + "' width=99.5%
+ height=" + height + "></iframe></div></div>"
+        //Make window draggable
+  $( function() {
+    $( ".window" ).draggable();
+  } );
+
+}
