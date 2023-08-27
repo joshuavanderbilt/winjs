@@ -6,7 +6,7 @@ function openwindow(title, wincontent, width) {
 	winid += 1;
 	//Windows will be inserted into the element with the id "desktop"
 	var desktop = document.getElementById("desktop");
-	desktop.innerHTML += "<div class='window active' id='" + winid + "' style='position:absolute;width:" + width + "px;'><div class='title-bar'><div class='title-bar-text'>" + title + "</div><div class='title-bar-controls'><button onclick='const element = document.getElementById(" + winid + ");element.remove()' aria-label='Close'></button></div></div><div class='window-body'>" + wincontent + "</div></div>"
+	desktop.innerHTML += "<div class='window active' id='" + winid + "' style='position:absolute;left:40px;top:40px;width:" + width + "px;'><div class='title-bar'><div class='title-bar-text'>" + title + "</div><div class='title-bar-controls'><button onclick='const element = document.getElementById(" + winid + ");element.remove()' aria-label='Close'></button></div></div><div class='window-body'>" + wincontent + "</div></div>"
 	//Make window draggable
   $( function() {
     $( ".window" ).draggable();
